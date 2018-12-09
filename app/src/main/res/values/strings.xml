@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Bunnybots Referee App</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="zero">0</string>
+    <string name="techFouls">Fouls</string>
+    <string name="fouls">Fouls</string>
+</resources>

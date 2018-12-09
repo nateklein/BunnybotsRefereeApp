@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Background"
+    tools:context=".RefereeScreenActivity">
+
+    <!--Red Alliance Title-->
+    <TextView
+        style="@style/RedText"
+        android:id="@+id/redAllianceText"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="8dp"
+        android:text="Red Alliance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Blue Alliance Title-->
+    <TextView
+        style="@style/BlueText"
+        android:id="@+id/blueAllianceText"
+        android:layout_marginEnd="100dp"
+        android:text="Blue Alliance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/redAllianceText" />
+
+    <!--Blue Alliance Tech Fouls Title-->
+    <TextView
+        style="@style/BlueText"
+        android:id="@+id/blueTechFoulText"
+        android:text="@string/techFouls"
+        app:layout_constraintTop_toTopOf="@id/redTechFoulText"
+        app:layout_constraintEnd_toEndOf="@id/blueAllianceText"
+        app:layout_constraintStart_toStartOf="@id/blueAllianceText"/>
+
+    <!--Blue Alliance Tech Fouls-->
+    <TextView
+        style="@style/Text"
+        android:id="@+id/blueTechFouls"
+        android:layout_marginTop="20dp"
+        android:text="@string/zero"
+        app:layout_constraintStart_toStartOf="@id/blueTechFoulText"
+        app:layout_constraintEnd_toEndOf="@id/blueTechFoulText"
+        app:layout_constraintTop_toBottomOf="@id/blueTechFoulText" />
+
+    <!--Blue Alliance Plus Tech Fouls Button-->
+    <Button
+        style="@style/Button"
+        android:id="@+id/plusBlueTechFouls"
+        android:text="+"
+        android:onClick="plusBlueTechFouls"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/blueTechFouls"
+        app:layout_constraintTop_toTopOf="@id/blueTechFouls"
+        app:layout_constraintStart_toEndOf="@id/blueTechFouls"/>
+
+    <!--<ImageView-->
+        <!--style="@style/ButtonImage"-->
+        <!--android:id="@+id/plusBlueTechFouls"-->
+        <!--android:layout_marginStart="20dp"-->
+        <!--android:onClick="plusBlueTechFouls"-->
+        <!--app:layout_constraintStart_toEndOf="@id/blueTechFouls"-->
+        <!--app:layout_constraintTop_toTopOf="@id/blueTechFouls"-->
+        <!--app:layout_constraintBottom_toBottomOf="@id/blueTechFouls"-->
+        <!--app:srcCompat="@drawable/ic_plus_blue_24dp" />-->
+
+    <!--Blue Alliance Minus Tech Fouls Button-->
+    <Button
+        style="@style/Button"
+        android:id="@+id/minusBlueTechFouls"
+        android:layout_marginEnd="20dp"
+        android:text="@string/minus"
+        android:onClick="minusBlueTechFouls"
+        app:layout_constraintEnd_toStartOf="@id/blueTechFouls"
+        app:layout_constraintBottom_toBottomOf="@id/blueTechFouls"
+        app:layout_constraintTop_toTopOf="@id/blueTechFouls"/>
+
+    <!--Red Alliance Tech Fouls Title-->
+    <TextView
+        style="@style/RedText"
+        android:id="@+id/redTechFoulText"
+        android:layout_marginTop="30dp"
+        android:text="@string/techFouls"
+        app:layout_constraintTop_toBottomOf="@id/redAllianceText"
+        app:layout_constraintEnd_toEndOf="@id/redAllianceText"
+        app:layout_constraintStart_toStartOf="@id/redAllianceText" />
+
+    <!--Red Alliance Tech Fouls-->
+    <TextView
+        style="@style/Text"
+        android:id="@+id/redTechFouls"
+        android:layout_marginTop="20dp"
+        android:text="@string/zero"
+        app:layout_constraintEnd_toEndOf="@id/redTechFoulText"
+        app:layout_constraintStart_toStartOf="@id/redTechFoulText"
+        app:layout_constraintTop_toBottomOf="@id/redTechFoulText" />
+
+    <!--Red Alliance Plus Tech Fouls Button-->
+    <Button
+        style="@style/Button"
+        android:id="@+id/plusRedTechFouls"
+        android:layout_marginStart="20dp"
+        android:text="@string/plus"
+        android:onClick="plusRedTechFouls"
+        app:layout_constraintStart_toEndOf="@id/redTechFouls"
+        app:layout_constraintBottom_toBottomOf="@id/redTechFouls"
+        app:layout_constraintTop_toTopOf="@id/redTechFouls"/>
+
+    <!--Red Alliance Minus Tech Fouls Button-->
+    <Button
+        style="@style/Button"
+        android:id="@+id/minusRedTechFouls"
+        android:layout_marginEnd="20dp"
+        android:text="@string/minus"
+        android:onClick="minusRedTechFouls"
+        app:layout_constraintEnd_toStartOf="@id/redTechFouls"
+        app:layout_constraintBottom_toBottomOf="@id/redTechFouls"
+        app:layout_constraintTop_toTopOf="@id/redTechFouls" />
+
+    <!--Red Alliance Fouls Text-->
+    <!--<TextView-->
+        <!--style="@style/RedText"-->
+        <!--android:id="@+id/redFoulsText"-->
+        <!--android:text="@string/fouls"-->
+        <!--android:layout_marginTop="50dp"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/redTechFouls"-->
+        <!--app:layout_constraintStart_toStartOf="@id/redTechFoulText" />-->
+
+    <!--Red Alliance Fouls-->
+    <!--<TextView-->
+        <!--style="@style/Text"-->
+        <!--android:id="@+id/redFouls"-->
+        <!--android:text="@string/zero"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--app:layout_constraintStart_toStartOf="@id/redFoulsText"-->
+        <!--app:layout_constraintEnd_toEndOf="@id/redFoulsText"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/redFoulsText" />-->
+
+    <!--Red Plus Fouls Button-->
+    <!--<Button-->
+        <!--style="@style/Button"-->
+        <!--android:id="@+id/plusRedFouls"-->
+        <!--android:text="@string/plus"-->
+        <!--android:layout_marginStart="20dp"-->
+        <!--android:onClick="plusRedFouls"-->
+        <!--app:layout_constraintBottom_toBottomOf="@id/redFouls"-->
+        <!--app:layout_constraintStart_toEndOf="@id/redFouls"-->
+        <!--app:layout_constraintTop_toTopOf="@id/redFouls" />-->
+
+    <!--Red Minus Fouls Button-->
+    <!--<Button-->
+        <!--style="@style/Button"-->
+        <!--android:id="@+id/minusRedFouls"-->
+        <!--android:text="@string/minus"-->
+        <!--android:layout_marginEnd="20dp"-->
+        <!--android:onClick="minusRedFouls"-->
+        <!--app:layout_constraintEnd_toStartOf="@id/redFouls"-->
+        <!--app:layout_constraintBottom_toBottomOf="@id/redFouls"-->
+        <!--app:layout_constraintTop_toTopOf="@id/redFouls" />-->
+
+    <!--Blue Alliance Fouls Text-->
+    <!--<TextView-->
+        <!--style="@style/BlueText"-->
+        <!--android:id="@+id/blueFoulsText"-->
+        <!--android:text="@string/fouls"-->
+        <!--android:layout_marginStart="60dp"-->
+        <!--app:layout_constraintTop_toTopOf="@id/redFoulsText"-->
+        <!--app:layout_constraintStart_toStartOf="@id/blueAllianceText"/>-->
+
+    <!--Blue Alliance Fouls-->
+    <!--<TextView-->
+        <!--style="@style/Text"-->
+        <!--android:id="@+id/blueFouls"-->
+        <!--android:text="@string/zero"-->
+        <!--android:layout_marginStart="35dp"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--app:layout_constraintStart_toStartOf="@id/blueFoulsText"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/blueFoulsText" />-->
+
+    <!--Blue Alliance Minus Fouls Button-->
+    <!--<Button-->
+        <!--style="@style/Button"-->
+        <!--android:id="@+id/minusBlueFouls"-->
+        <!--android:text="@string/minus"-->
+        <!--android:layout_marginEnd="20dp"-->
+        <!--android:onClick="minusBlueFouls"-->
+        <!--app:layout_constraintBottom_toBottomOf="@id/blueFouls"-->
+        <!--app:layout_constraintEnd_toStartOf="@id/blueFouls"-->
+        <!--app:layout_constraintTop_toTopOf="@id/blueFouls" />-->
+
+    <!--Blue Alliance Plus Fouls Button-->
+    <!--<Button-->
+        <!--style="@style/Button"-->
+        <!--android:id="@+id/plusBlueFouls"-->
+        <!--android:text="@string/plus"-->
+        <!--android:layout_marginStart="20dp"-->
+        <!--android:onClick="plusBlueFouls"-->
+        <!--app:layout_constraintBottom_toBottomOf="@id/blueFouls"-->
+        <!--app:layout_constraintStart_toEndOf="@id/blueFouls"-->
+        <!--app:layout_constraintTop_toTopOf="@id/blueFouls"/>-->
+
+    <!--Foul Points Text-->
+    <TextView
+        style="@style/Text"
+        android:id="@+id/foulPointsText"
+        android:text="Foul Points"
+        app:layout_constraintTop_toTopOf="@id/redAllianceText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--Red Foul Points-->
+    <TextView
+        android:layout_height="70dp"
+        android:layout_width="175dp"
+        android:id="@+id/redFoulPoints"
+        android:background="@color/redAlliance"
+        android:text="@string/zero"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/foulPointsText"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--Blue Foul Points-->
+    <TextView
+        android:layout_height="70dp"
+        android:layout_width="175dp"
+        android:id="@+id/blueFoulPoints"
+        android:background="@color/blueAlliance"
+        android:text="@string/zero"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/redFoulPoints"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--Next Match Button-->
+    <Button
+        style="@style/Button"
+        android:id="@+id/nextMatch"
+        android:text="Next Match"
+        android:textStyle="normal"
+        android:textColor="#000000"
+        android:layout_marginTop="20dp"
+        android:onClick="nextMatch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/blueFoulPoints"/>
+
+    <!--Match Selection Dropdown-->
+    <Spinner
+        style="@style/Dropdown"
+        android:background="#FFFFFF"
+        android:id="@+id/matchDropdown"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toTopOf="@id/prevMatchButton"
+        app:layout_constraintStart_toStartOf="@id/nextMatch" />
+
+    <!--Go Button-->
+    <Button
+        style="@style/Button"
+        android:id="@+id/prevMatchButton"
+        android:text="Go"
+        android:textColor="#000000"
+        android:textStyle="normal"
+        android:onClick="goToPrevious"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="@id/nextMatch"
+        app:layout_constraintTop_toBottomOf="@id/nextMatch"/>
+
+</android.support.constraint.ConstraintLayout>
